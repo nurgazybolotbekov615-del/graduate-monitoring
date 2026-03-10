@@ -1,0 +1,127 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Умная карта трудоустройства</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<style>
+
+#map{
+height:600px;
+border-radius:15px;
+margin-top:20px;
+}
+
+.search-box{
+margin-top:20px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<h1 class="title">🗺 Умная карта трудоустройства</h1>
+
+<div class="search-box">
+
+<input type="text" id="studentSearch" placeholder="🔎 Найти студента">
+
+<button onclick="searchStudent()" class="btn btn-light">
+Найти
+</button>
+
+</div>
+
+<div id="map"></div>
+
+<div class="text-center mt-4">
+<a href="/" class="btn btn-light">Назад</a>
+</div>
+
+</div>
+
+
+<script>
+
+var map = L.map('map').setView([41.2044,74.7661],6);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+maxZoom:19
+}).addTo(map);
+
+var students = {{ students|safe }};
+
+var markers = [];
+
+students.forEach(function(student){
+
+let color = "red"
+
+if(student.status == "work"){
+color = "green"
+}
+
+if(student.status == "study"){
+color = "blue"
+}
+
+if(student.status == "army"){
+color = "orange"
+}
+
+var icon = L.icon({
+iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-"+color+".png",
+shadowUrl: "https://unpkg.com/leaflet@1.7.1/dist/images/marker-shadow.png",
+iconSize: [25,41],
+iconAnchor: [12,41]
+})
+
+var marker = L.marker([student.lat,student.lng],{icon:icon})
+.addTo(map)
+.bindPopup(
+"<b>"+student.name+"</b><br>"+student.city+"<br>"+student.status
+)
+
+markers.push({
+name:student.name.toLowerCase(),
+marker:marker
+})
+
+})
+
+
+function searchStudent(){
+
+var name = document.getElementById("studentSearch").value.toLowerCase()
+
+markers.forEach(function(item){
+
+if(item.name.includes(name)){
+
+map.setView(item.marker.getLatLng(),10)
+
+item.marker.openPopup()
+
+}
+
+})
+
+}
+
+</script>
+
+</body>
+</html>

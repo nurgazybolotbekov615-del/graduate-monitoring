@@ -1,0 +1,175 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Мониторинг выпускников</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="container mt-5">
+
+<div class="container-box">
+
+<h1 class="title text-center mb-4">🎓 Мониторинг выпускников</h1>
+
+<!-- СТАТИСТИКА -->
+
+<div class="row mb-4">
+
+<div class="col-md-3">
+<div class="stat-card text-center">
+<div class="stat-number">{{ total }}</div>
+<div class="stat-title">Всего студентов</div>
+</div>
+</div>
+
+</div>
+
+<!-- ОСНОВНЫЕ ДЕЙСТВИЯ -->
+
+<h3 class="mt-4">⚡ Основные действия</h3>
+
+<div class="row mt-3">
+
+<div class="col-md-4">
+<a href="/analytics/" class="btn btn-primary w-100 p-3">
+📊 Аналитика
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/students/" class="btn btn-success w-100 p-3">
+👨‍🎓 Студенты
+</a>
+</div>
+
+<div class="col-md-4">
+<a href="/upload/" class="btn btn-warning w-100 p-3">
+📂 Загрузить Excel
+</a>
+</div>
+
+</div>
+
+<!-- АНАЛИТИКА -->
+
+<h3 class="mt-5">📈 Аналитика</h3>
+
+<div class="row mt-3">
+
+<div class="col-md-6">
+<a href="/map/" class="btn btn-warning w-100 p-3">
+🗺 Карта трудоустройства
+</a>
+</div>
+
+<div class="col-md-6">
+<a href="/groups/" class="btn btn-secondary w-100 p-3">
+📚 Группы
+</a>
+</div>
+
+</div>
+
+<!-- AI -->
+
+<h3 class="mt-5">🤖 AI инструменты</h3>
+
+<div class="row mt-3">
+
+<div class="col-md-6">
+<a href="/ai-chat/" class="btn btn-dark w-100 p-3">
+🤖 AI анализ
+</a>
+</div>
+
+<div class="col-md-6">
+<a href="/clear-chat/" class="btn btn-danger w-100 p-3">
+🧹 Очистить чат
+</a>
+</div>
+
+</div>
+
+<!-- ОТЧЁТЫ -->
+
+<h3 class="mt-5">📄 Отчёты</h3>
+
+<div class="row mt-3">
+
+<div class="col-md-6">
+<a href="/export/" class="btn btn-light w-100 p-3">
+📥 Скачать Excel отчёт
+</a>
+</div>
+
+<div class="col-md-6">
+<a href="/pdf/" class="btn btn-light w-100 p-3">
+📑 Скачать PDF отчёт
+</a>
+</div>
+
+</div>
+
+<!-- GOOGLE FORMS -->
+
+<h3 class="mt-5">🔄 Синхронизация</h3>
+
+<div class="row mt-3">
+
+<div class="col-md-12">
+<a href="/sync/" class="btn btn-info w-100 p-3">
+🔄 Синхронизация Google Forms
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- О КОЛЛЕДЖЕ -->
+
+<div class="about-section mt-5">
+
+<div class="container">
+
+<h2 class="text-center mb-4">🏫 О колледже</h2>
+
+<p class="about-text text-center">
+
+Наш колледж готовит специалистов в сфере информационных технологий,
+экономики и телекоммуникаций.
+
+Система мониторинга выпускников помогает анализировать
+трудоустройство студентов и улучшать качество образования.
+
+</p>
+
+<div class="text-center mt-3">
+
+<a href="https://nsu.kg/%D0%B1%D0%B0%D1%88%D0%BA%D1%8B-%D0%B1%D0%B5%D1%82/" target="_blank" class="btn btn-light">
+
+🌐 Перейти на сайт колледжа
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
