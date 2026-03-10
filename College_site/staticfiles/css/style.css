@@ -1,0 +1,291 @@
+/* ===== ОСНОВНОЙ ФОН ===== */
+
+body{
+background: radial-gradient(circle at 10% 20%, #ff6a00 0%, transparent 40%),
+            radial-gradient(circle at 90% 30%, #6c5ce7 0%, transparent 40%),
+            radial-gradient(circle at 50% 90%, #00c6ff 0%, transparent 40%),
+            #0f172a;
+
+min-height:100vh;
+font-family: 'Segoe UI', sans-serif;
+color:white;
+}
+
+
+/* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
+
+.container-box{
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(15px);
+border-radius:20px;
+padding:40px;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 0 40px rgba(0,0,0,0.5);
+margin-bottom:30px;
+}
+
+
+/* ===== ЗАГОЛОВОК ===== */
+
+.title{
+font-size:40px;
+font-weight:700;
+text-align:center;
+margin-bottom:30px;
+letter-spacing:1px;
+}
+
+
+/* ===== КАРТОЧКИ СТАТИСТИКИ ===== */
+
+.stat-card{
+background: rgba(255,255,255,0.06);
+backdrop-filter: blur(10px);
+border-radius:18px;
+padding:30px;
+text-align:center;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+transition:all 0.3s ease;
+}
+
+.stat-card:hover{
+transform: translateY(-6px) scale(1.02);
+box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+
+/* ===== ИКОНКИ ===== */
+
+.stat-card i{
+margin-bottom:10px;
+opacity:0.9;
+}
+
+
+/* ===== ЧИСЛО ===== */
+
+.stat-card h2{
+font-size:34px;
+font-weight:700;
+margin-top:10px;
+}
+
+
+/* ===== ПОДПИСЬ ===== */
+
+.stat-card p{
+opacity:0.8;
+font-size:16px;
+}
+
+
+/* ===== КНОПКИ ===== */
+
+.btn{
+border-radius:30px;
+padding:10px 25px;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+
+/* ===== ТАБЛИЦА ===== */
+
+.table{
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(8px);
+border-radius:15px;
+overflow:hidden;
+color:white;
+}
+
+.table th{
+background: linear-gradient(135deg,#6c5ce7,#00c6ff);
+border:none;
+}
+
+.table td{
+background: rgba(0,0,0,0.3);
+border-color:rgba(255,255,255,0.05);
+}
+
+
+/* ===== ГРАФИКИ ===== */
+
+canvas{
+background: rgba(255,255,255,0.05);
+border-radius:20px;
+padding:20px;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+
+/* ===== КАРТОЧКИ ГРАФИКОВ ===== */
+
+.card{
+background: rgba(255,255,255,0.05);
+backdrop-filter: blur(10px);
+border-radius:20px;
+border:1px solid rgba(255,255,255,0.1);
+box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+
+/* ===== ФОРМЫ ===== */
+
+.form-control,
+.form-select{
+background: rgba(255,255,255,0.08);
+border:1px solid rgba(255,255,255,0.1);
+color:white;
+border-radius:10px;
+}
+
+.form-control:focus,
+.form-select:focus{
+background: rgba(255,255,255,0.12);
+color:white;
+box-shadow:none;
+border-color:#6c5ce7;
+}
+
+
+/* ===== СКРОЛЛ ===== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-track{
+background:#0f172a;
+}
+
+::-webkit-scrollbar-thumb{
+background:#6c5ce7;
+border-radius:10px;
+}
+
+
+/* ===== АНИМАЦИЯ ЗАГРУЗКИ ===== */
+
+.fade-in{
+animation:fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(10px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.about-section{
+margin-top:80px;
+padding:50px;
+background: rgba(255,255,255,0.1);
+backdrop-filter: blur(10px);
+border-radius:20px;
+box-shadow:0 10px 40px rgba(0,0,0,0.3);
+}
+
+.about-text{
+font-size:18px;
+text-align:center;
+max-width:800px;
+margin:auto;
+opacity:0.9;
+}
+
+.search-box{
+margin-bottom:20px;
+text-align:center;
+}
+
+.search-box input{
+padding:10px;
+width:250px;
+border-radius:8px;
+border:none;
+margin-right:10px;
+}
+
+.search-box{
+text-align:center;
+margin-bottom:20px;
+}
+
+.search-box input{
+padding:10px;
+width:250px;
+border-radius:8px;
+border:none;
+margin-right:10px;
+}
+
+.dashboard{
+width:90%;
+margin:auto;
+text-align:center;
+}
+
+.section{
+margin-top:40px;
+}
+
+.section h2{
+margin-bottom:15px;
+}
+
+.btn{
+padding:12px 25px;
+margin:8px;
+border-radius:25px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+}
+
+.btn-blue{
+background:#2979ff;
+}
+
+.btn-green{
+background:#2ecc71;
+}
+
+.btn-yellow{
+background:#f1c40f;
+color:black;
+}
+
+.btn-orange{
+background:#f39c12;
+}
+
+.btn-purple{
+background:#9b59b6;
+}
+
+.btn-pink{
+background:#e84393;
+}
+
+.btn-red{
+background:#e74c3c;
+}
+
+.btn-gray{
+background:#bdc3c7;
+color:black;
+}
