@@ -1,8 +1,11 @@
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Мониторинг выпускников</title>
 
@@ -15,131 +18,138 @@
 </head>
 
 <body>
+    <!-- <div class="robot-container">
+
+<img src="{% static 'img/robot.jpg' %}" class="robot">
+
+</div> -->
 
 <div class="container mt-5">
 
 <div class="container-box">
 
-<h1 class="title text-center mb-4">🎓 Мониторинг выпускников</h1>
+<h1 class="title text-center mb-5">🎓 Мониторинг выпускников</h1>
 
-<!-- СТАТИСТИКА -->
+<!-- ===== СТАТИСТИКА ===== -->
 
-<div class="row mb-4">
+<div class="row justify-content-center mb-5">
 
 <div class="col-md-3">
+
 <div class="stat-card text-center">
-<div class="stat-number">{{ total }}</div>
-<div class="stat-title">Всего студентов</div>
-</div>
-</div>
+
+<i class="fa-solid fa-users fa-2x"></i>
+
+<h2 class="counter" data-target="{{ total }}">0</h2>
+
+<p>Всего студентов</p>
 
 </div>
 
-<!-- ОСНОВНЫЕ ДЕЙСТВИЯ -->
+</div>
 
-<h3 class="mt-4">⚡ Основные действия</h3>
+</div>
 
-<div class="row mt-3">
 
-<div class="col-md-4">
-<a href="/analytics/" class="btn btn-primary w-100 p-3">
-📊 Аналитика
+<!-- ===== ОСНОВНЫЕ РАЗДЕЛЫ ===== -->
+
+<div class="features-grid">
+
+<a href="/analytics/" class="feature-card">
+
+<img src="{% static 'img/analytics.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>ANALYTICS</h2>
+
+<p>Анализ трудоустройства студентов</p>
+
+</div>
+
 </a>
+
+
+<a href="/students/" class="feature-card">
+
+<img src="{% static 'img/students.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>STUDENTS</h2>
+
+<p>База данных выпускников</p>
+
 </div>
 
-<div class="col-md-4">
-<a href="/students/" class="btn btn-success w-100 p-3">
-👨‍🎓 Студенты
 </a>
+
+
+<a href="/map/" class="feature-card">
+
+<img src="{% static 'img/map.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>MAP</h2>
+
+<p>Карта трудоустройства</p>
+
 </div>
 
-<div class="col-md-4">
-<a href="/upload/" class="btn btn-warning w-100 p-3">
-📂 Загрузить Excel
 </a>
-</div>
+
+
+<a href="/ai-chat/" class="feature-card">
+
+<img src="{% static 'img/ai.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>AI</h2>
+
+<p>AI анализ данных</p>
 
 </div>
 
-<!-- АНАЛИТИКА -->
-
-<h3 class="mt-5">📈 Аналитика</h3>
-
-<div class="row mt-3">
-
-<div class="col-md-6">
-<a href="/map/" class="btn btn-warning w-100 p-3">
-🗺 Карта трудоустройства
 </a>
+
+
+<a href="/upload/" class="feature-card">
+
+<img src="{% static 'img/excel.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>EXCEL</h2>
+
+<p>Импорт данных</p>
+
 </div>
 
-<div class="col-md-6">
-<a href="/groups/" class="btn btn-secondary w-100 p-3">
-📚 Группы
 </a>
-</div>
+
+
+<a href="/groups/" class="feature-card">
+
+<img src="{% static 'img/groups.jpg' %}">
+
+<div class="feature-overlay">
+
+<h2>GROUPS</h2>
+
+<p>Группы колледжа</p>
 
 </div>
 
-<!-- AI -->
-
-<h3 class="mt-5">🤖 AI инструменты</h3>
-
-<div class="row mt-3">
-
-<div class="col-md-6">
-<a href="/ai-chat/" class="btn btn-dark w-100 p-3">
-🤖 AI анализ
 </a>
-</div>
-
-<div class="col-md-6">
-<a href="/clear-chat/" class="btn btn-danger w-100 p-3">
-🧹 Очистить чат
-</a>
-</div>
-
-</div>
-
-<!-- ОТЧЁТЫ -->
-
-<h3 class="mt-5">📄 Отчёты</h3>
-
-<div class="row mt-3">
-
-<div class="col-md-6">
-<a href="/export/" class="btn btn-light w-100 p-3">
-📥 Скачать Excel отчёт
-</a>
-</div>
-
-<div class="col-md-6">
-<a href="/pdf/" class="btn btn-light w-100 p-3">
-📑 Скачать PDF отчёт
-</a>
-</div>
-
-</div>
-
-<!-- GOOGLE FORMS -->
-
-<h3 class="mt-5">🔄 Синхронизация</h3>
-
-<div class="row mt-3">
-
-<div class="col-md-12">
-<a href="/sync/" class="btn btn-info w-100 p-3">
-🔄 Синхронизация Google Forms
-</a>
-</div>
 
 </div>
 
 </div>
 
-</div>
 
-<!-- О КОЛЛЕДЖЕ -->
+<!-- ===== О КОЛЛЕДЖЕ ===== -->
 
 <div class="about-section mt-5">
 
@@ -171,5 +181,38 @@
 
 </div>
 
+<script>
+
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+
+const update=()=>{
+
+const target=+counter.getAttribute('data-target');
+
+const current=+counter.innerText;
+
+const increment=target/50;
+
+if(current<target){
+
+counter.innerText=Math.ceil(current+increment);
+
+setTimeout(update,40);
+
+}else{
+
+counter.innerText=target;
+
+}
+
+};
+
+update();
+
+});
+
+</script>
 </body>
 </html>

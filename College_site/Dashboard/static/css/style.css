@@ -1,291 +1,717 @@
 /* ===== ОСНОВНОЙ ФОН ===== */
 
 body{
-background: radial-gradient(circle at 10% 20%, #ff6a00 0%, transparent 40%),
-            radial-gradient(circle at 90% 30%, #6c5ce7 0%, transparent 40%),
-            radial-gradient(circle at 50% 90%, #00c6ff 0%, transparent 40%),
-            #0f172a;
+background:
+radial-gradient(circle at 10% 20%, #ff6a00 0%, transparent 40%),
+radial-gradient(circle at 90% 30%, #6c5ce7 0%, transparent 40%),
+radial-gradient(circle at 50% 90%, #00c6ff 0%, transparent 40%),
+#0f172a;
 
 min-height:100vh;
-font-family: 'Segoe UI', sans-serif;
+font-family:'Segoe UI',sans-serif;
 color:white;
 }
+
 
 
 /* ===== ГЛАВНЫЙ КОНТЕЙНЕР ===== */
 
 .container-box{
-background: rgba(255,255,255,0.05);
-backdrop-filter: blur(15px);
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(15px);
+
 border-radius:20px;
+
 padding:40px;
+
 border:1px solid rgba(255,255,255,0.1);
+
 box-shadow:0 0 40px rgba(0,0,0,0.5);
+
 margin-bottom:30px;
+
 }
+
 
 
 /* ===== ЗАГОЛОВОК ===== */
 
 .title{
+
 font-size:40px;
+
 font-weight:700;
+
 text-align:center;
+
 margin-bottom:30px;
+
 letter-spacing:1px;
+
 }
 
 
-/* ===== КАРТОЧКИ СТАТИСТИКИ ===== */
+
+/* ===== СТАТИСТИКА ===== */
 
 .stat-card{
-background: rgba(255,255,255,0.06);
-backdrop-filter: blur(10px);
+
+background:rgba(255,255,255,0.06);
+
+backdrop-filter:blur(10px);
+
 border-radius:18px;
+
 padding:30px;
+
 text-align:center;
+
 border:1px solid rgba(255,255,255,0.1);
+
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
-transition:all 0.3s ease;
+
+transition:0.3s;
+
 }
 
 .stat-card:hover{
-transform: translateY(-6px) scale(1.02);
+
+transform:translateY(-6px) scale(1.02);
+
 box-shadow:0 15px 35px rgba(0,0,0,0.6);
+
 }
-
-
-/* ===== ИКОНКИ ===== */
 
 .stat-card i{
+
 margin-bottom:10px;
+
 opacity:0.9;
+
 }
-
-
-/* ===== ЧИСЛО ===== */
 
 .stat-card h2{
+
 font-size:34px;
+
 font-weight:700;
+
 margin-top:10px;
+
 }
-
-
-/* ===== ПОДПИСЬ ===== */
 
 .stat-card p{
+
 opacity:0.8;
+
 font-size:16px;
+
 }
+
 
 
 /* ===== КНОПКИ ===== */
 
 .btn{
+
 border-radius:30px;
+
 padding:10px 25px;
+
 font-weight:600;
+
 transition:0.3s;
+
 }
 
 .btn:hover{
+
 transform:scale(1.05);
+
 }
+
 
 
 /* ===== ТАБЛИЦА ===== */
 
 .table{
-background: rgba(255,255,255,0.05);
-backdrop-filter: blur(8px);
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(8px);
+
 border-radius:15px;
+
 overflow:hidden;
+
 color:white;
+
 }
 
 .table th{
-background: linear-gradient(135deg,#6c5ce7,#00c6ff);
+
+background:linear-gradient(135deg,#6c5ce7,#00c6ff);
+
 border:none;
+
 }
 
 .table td{
-background: rgba(0,0,0,0.3);
+
+background:rgba(0,0,0,0.3);
+
 border-color:rgba(255,255,255,0.05);
+
 }
+
 
 
 /* ===== ГРАФИКИ ===== */
 
 canvas{
-background: rgba(255,255,255,0.05);
+
+background:rgba(255,255,255,0.05);
+
 border-radius:20px;
+
 padding:20px;
+
 border:1px solid rgba(255,255,255,0.1);
+
 box-shadow:0 0 20px rgba(0,0,0,0.4);
+
 }
 
 
-/* ===== КАРТОЧКИ ГРАФИКОВ ===== */
+
+/* ===== КАРТОЧКИ ===== */
 
 .card{
-background: rgba(255,255,255,0.05);
-backdrop-filter: blur(10px);
+
+background:rgba(255,255,255,0.05);
+
+backdrop-filter:blur(10px);
+
 border-radius:20px;
+
 border:1px solid rgba(255,255,255,0.1);
+
 box-shadow:0 10px 30px rgba(0,0,0,0.4);
+
 }
+
 
 
 /* ===== ФОРМЫ ===== */
 
 .form-control,
+
 .form-select{
-background: rgba(255,255,255,0.08);
+
+background:rgba(255,255,255,0.08);
+
 border:1px solid rgba(255,255,255,0.1);
+
 color:white;
+
 border-radius:10px;
+
 }
 
 .form-control:focus,
+
 .form-select:focus{
-background: rgba(255,255,255,0.12);
+
+background:rgba(255,255,255,0.12);
+
 color:white;
+
 box-shadow:none;
+
 border-color:#6c5ce7;
+
 }
+
 
 
 /* ===== СКРОЛЛ ===== */
 
 ::-webkit-scrollbar{
+
 width:8px;
+
 }
 
 ::-webkit-scrollbar-track{
+
 background:#0f172a;
+
 }
 
 ::-webkit-scrollbar-thumb{
+
 background:#6c5ce7;
+
 border-radius:10px;
+
 }
 
 
-/* ===== АНИМАЦИЯ ЗАГРУЗКИ ===== */
+
+/* ===== АНИМАЦИЯ ===== */
 
 .fade-in{
+
 animation:fadeIn 0.8s ease;
+
 }
 
 @keyframes fadeIn{
+
 from{
+
 opacity:0;
+
 transform:translateY(10px);
+
 }
 
 to{
+
 opacity:1;
+
 transform:translateY(0);
-}
+
 }
 
+}
+
+
+
+/* ===== ABOUT ===== */
+
 .about-section{
+
 margin-top:80px;
+
 padding:50px;
-background: rgba(255,255,255,0.1);
-backdrop-filter: blur(10px);
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(10px);
+
 border-radius:20px;
+
 box-shadow:0 10px 40px rgba(0,0,0,0.3);
+
 }
 
 .about-text{
+
 font-size:18px;
+
 text-align:center;
+
 max-width:800px;
+
 margin:auto;
+
 opacity:0.9;
+
 }
 
-.search-box{
-margin-bottom:20px;
-text-align:center;
+
+
+/* ===== FEATURE GRID ===== */
+
+.features-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+margin-top:50px;
+
 }
 
-.search-box input{
-padding:10px;
-width:250px;
-border-radius:8px;
-border:none;
-margin-right:10px;
-}
 
-.search-box{
-text-align:center;
-margin-bottom:20px;
-}
 
-.search-box input{
-padding:10px;
-width:250px;
-border-radius:8px;
-border:none;
-margin-right:10px;
-}
+/* ===== FEATURE CARD ===== */
 
-.dashboard{
-width:90%;
-margin:auto;
-text-align:center;
-}
+.feature-card{
 
-.section{
-margin-top:40px;
-}
+position:relative;
 
-.section h2{
-margin-bottom:15px;
-}
+aspect-ratio:1/1;
 
-.btn{
-padding:12px 25px;
-margin:8px;
-border-radius:25px;
+border-radius:18px;
+
+overflow:hidden;
+
 text-decoration:none;
+
 color:white;
-font-weight:bold;
+
+background:#0f172a;
+
+box-shadow:0 15px 40px rgba(0,0,0,0.6);
+
+transition:0.4s;
+
+display:block;
+
 }
 
-.btn-blue{
-background:#2979ff;
+
+
+/* ===== IMAGE ===== */
+
+.feature-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+opacity:0.55;
+
+transition:0.4s;
+
 }
 
-.btn-green{
-background:#2ecc71;
+
+
+/* ===== HOVER ===== */
+
+.feature-card:hover{
+
+transform:translateY(-10px) scale(1.04);
+
+box-shadow:
+
+0 0 20px #6c5ce7,
+
+0 0 40px #6c5ce7,
+
+0 0 60px #6c5ce7;
+
 }
 
-.btn-yellow{
-background:#f1c40f;
-color:black;
+.feature-card:hover img{
+
+opacity:0.75;
+
+transform:scale(1.05);
+
 }
 
-.btn-orange{
-background:#f39c12;
+
+
+/* ===== OVERLAY ===== */
+
+.feature-overlay{
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+right:20px;
+
 }
 
-.btn-purple{
-background:#9b59b6;
+
+
+/* ===== TITLE ===== */
+
+.feature-overlay h3{
+
+font-size:24px;
+
+font-weight:700;
+
+margin-bottom:5px;
+
+text-shadow:0 0 10px rgba(0,0,0,0.8);
+
 }
 
-.btn-pink{
-background:#e84393;
+
+
+/* ===== DESCRIPTION ===== */
+
+.feature-overlay p{
+
+font-size:14px;
+
+opacity:0.9;
+
+text-shadow:0 0 10px rgba(0,0,0,0.8);
+
 }
 
-.btn-red{
-background:#e74c3c;
+
+
+/* ===== NEON TEXT ===== */
+
+.neon{
+
+text-shadow:
+
+0 0 5px #6c5ce7,
+
+0 0 10px #6c5ce7,
+
+0 0 20px #6c5ce7;
+
 }
 
-.btn-gray{
-background:#bdc3c7;
-color:black;
+/* ===== AI BACKGROUND ANIMATION ===== */
+
+body::before{
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+radial-gradient(circle,#6c5ce7 1px,transparent 1px);
+
+background-size:40px 40px;
+
+opacity:0.15;
+
+animation:gridMove 20s linear infinite;
+
+pointer-events:none;
+}
+
+@keyframes gridMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(40px);
+}
+
+}
+
+/* ===== TESLA LIGHT LINES ===== */
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:
+linear-gradient(90deg,
+transparent,
+rgba(108,92,231,0.2),
+transparent);
+
+animation:lightMove 8s linear infinite;
+
+pointer-events:none;
+}
+
+@keyframes lightMove{
+
+0%{
+transform:translateX(-100%);
+}
+
+100%{
+transform:translateX(100%);
+}
+
+}
+/* ===== ROBOT ===== */
+
+.robot-container{
+
+text-align:center;
+
+margin-bottom:40px;
+
+}
+
+.robot{
+
+width:220px;
+
+animation:floatRobot 4s ease-in-out infinite;
+
+filter:drop-shadow(0 0 20px #6c5ce7);
+
+}
+
+@keyframes floatRobot{
+
+0%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0);
+}
+
+}
+
+/* ===== AI GRID ===== */
+
+.features-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+}
+
+
+/* ===== CARD ===== */
+
+.feature-card{
+
+position:relative;
+
+height:420px;
+
+border-radius:20px;
+
+overflow:hidden;
+
+text-decoration:none;
+
+background:#111;
+
+box-shadow:0 20px 60px rgba(0,0,0,0.6);
+
+transition:0.4s;
+
+}
+
+
+/* ===== IMAGE ===== */
+
+.feature-card img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+filter:brightness(0.7);
+
+transition:0.5s;
+
+}
+
+
+/* ===== HOVER ===== */
+
+.feature-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:
+
+0 0 20px #8b5cf6,
+
+0 0 40px #8b5cf6;
+
+}
+
+.feature-card:hover img{
+
+transform:scale(1.1);
+
+}
+
+
+/* ===== TEXT ===== */
+
+.feature-overlay{
+
+position:absolute;
+
+bottom:40px;
+
+left:30px;
+
+right:30px;
+
+color:white;
+
+}
+
+.feature-overlay h2{
+
+font-size:38px;
+
+font-weight:800;
+
+margin-bottom:10px;
+
+text-shadow:0 0 10px rgba(0,0,0,0.8);
+
+}
+
+.feature-overlay p{
+
+font-size:14px;
+
+opacity:0.8;
+
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media(max-width:1000px){
+
+.features-grid{
+
+grid-template-columns:1fr 1fr;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.features-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
